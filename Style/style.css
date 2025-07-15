@@ -250,16 +250,16 @@ span.Flight {
   gap: 2rem;
   padding-left: 1rem;
 }
-.row-1 {
+.row-one {
   display: flex;
   flex-direction: column;
   gap: 0.8rem;
 }
-.row-1 h4 {
+.row-one h4 {
   font-size: 1.2em;
   font-weight: 550;
 }
-.row-1 p {
+.row-one p {
   color: var(--text-light);
 }
 .rating-container {
@@ -620,12 +620,15 @@ footer .container .top{
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    padding: 0 1rem;
+    width: 100%;
 }
 .row h4{
     font-size: 1.2rem;
 }
 .row-1 p{
     width: 18rem;
+    line-height: 1.4rem;
 }
 .socials{
     display: flex;
@@ -648,6 +651,9 @@ footer .container .top{
 .socials span i{
     font-size: 1.25rem;
     color: var(--white);
+}
+.row-4{
+  padding-left: -2rem;
 }
 .links{
     display: flex;
@@ -676,10 +682,11 @@ footer .container .top{
 form{
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
+  width: 100%;
 }
 input{
-  width: 100%;
+  width: 17rem;
   border-radius: .3rem;
   color: var(--text-dark);
   font-size: 1rem;
@@ -698,8 +705,14 @@ form button{
   padding: .75rem;
   border: none;
   background-color: var(--primary-color);
+  cursor: pointer;
 }
 form button:hover{
   background-color: var(--primary-color-dark);
   transition: all .3s ease-in-out;
+}
+.copyright{
+  color: var(--text-light);
+  font-size: 1rem;
+  text-align: center;
 }
