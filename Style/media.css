@@ -1,3 +1,25 @@
+@media (min-width: 795px) {
+  /* section-1 */
+  .hero {
+    position: relative;
+    flex-direction: row;
+    height: 650px;
+    max-width: 1200px;
+    padding: 0 1rem;
+    margin: 0 auto;
+  }
+  .hero-image {
+    width: 100%;
+    padding-left: 12rem;
+  }
+  .hero-image img {
+    width: unset;
+    height: 40rem;
+    position: absolute;
+    top: -18rem;
+    left: -4rem;
+  }
+}
 @media (min-width: 1150px) {
   /* section-1 */
   .card img {
@@ -18,12 +40,12 @@
 @media (max-width: 956px) {
   /* section-2 */
   .hover-card {
-  height: 19rem;
-}
-.card-hover {
-  top: 15rem;
-  height: 19rem !important;
-}
+    padding-top: 3.5rem;
+  }
+  .card-hover .content p {
+    font-size: 0.75rem;
+    width: 100%;
+  }
   .section-2 .col-2 .content h2 {
     font-size: 2rem;
     width: 100%;
@@ -35,6 +57,11 @@
   .row-1 p {
     width: 100%;
   }
+}
+@media (max-width: 845px){
+  .card-hover .content:nth-child(2n) {
+  gap: .1rem !important;
+}
 }
 @media (max-width: 795px) {
   /* navbar */
@@ -55,7 +82,7 @@
     justify-content: space-between;
     width: 100%;
     height: fit-content;
-    padding: 1rem;
+    padding: 1.3rem 1rem;
     z-index: 6;
   }
   .hamburger.active .line-2 {
@@ -77,6 +104,7 @@
   .nav-content {
     height: fit-content;
     gap: 2rem;
+    padding: 0;
   }
   .logo {
     color: var(--white);
@@ -125,15 +153,13 @@
 
   /* Header */
   header {
-    padding-top: 5rem;
+    padding: 5rem .5rem 0 .5rem;
   }
   .hero {
-    flex-direction: column;
-    align-items: center;
     gap: 20rem;
     width: 100%;
-    height: 750px;
-    padding-top: 5rem;
+    padding-top: 3rem;
+    height: 700px;
   }
   .hero-content {
     justify-content: center;
@@ -153,17 +179,13 @@
     place-content: center;
   }
   .hero-image {
-    /* position: relative;  */
     position: static;
     overflow: visible;
     width: 100%;
-    height: 150%;
+    height: 100%;
   }
   .hero-image img {
-    width: 40rem;
-    height: 20rem;
-    /* width: 100%;
-    height: 150%; */
+    width: 100%;
     position: absolute;
     top: -18rem;
     left: 0;
@@ -180,18 +202,24 @@
     grid-template-columns: repeat(2, 1fr);
   }
   /* section-2 */
+  .hover-card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hover-card:nth-child(3n) {
+    margin-top: -1rem;
+    margin-bottom: 1rem;
+  }
   .section-2 .col-2 {
     flex-wrap: wrap;
   }
   .showcase {
-    /* height: 30rem; */
     width: 100%;
     height: 100%;
     max-width: 100%;
     max-height: 100%;
   }
   .box-wrapper,
-  .hover-card-wrapper,
   .dotted-box-wrapper {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -208,6 +236,10 @@
 }
 @media (max-width: 540px) {
   /* Header */
+  .hero {
+    padding-top: 10rem;
+    height: 550px;
+  }
   .hero-content h2 {
     font-size: 1rem;
     width: 100%;
@@ -234,21 +266,34 @@
     justify-content: center;
   }
   /* section-2 */
+  .hover-card-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+    height: 100%;
+    gap: 0;
+  }
   .hover-card {
-  margin-top: -1rem;
-}
-.card-bg {
-  height: 10rem !important;
-}
+    padding-top: 2.3rem;
+  }
+  .hover-card:nth-child(3n) {
+    margin-top: 0;
+  }
+  .card-bg {
+    height: 10rem !important;
+  }
   .section-2 .col-2 {
     flex-wrap: wrap;
   }
   .showcase {
-    /* height: 30rem; */
     width: 100%;
     height: 100%;
   }
   /* section-4 */
+  .reviews {
+    height: 23rem;
+  }
   .review-content p {
     width: 15rem;
     line-height: 1.3rem;

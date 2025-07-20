@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,30..900;1,30..900&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -59,11 +59,11 @@ li {
   text-decoration: none;
   color: var(--primary-color);
   font-weight: 600;
-  transition: all 0.5s ease-in-out;
+  display: inline-block;
+  transition: transform .2s ease;
 }
 .navlinks a:hover {
   transform: scale(1.1);
-  transition: all 0.5s ease-in-out;
 }
 .btn-1 {
   display: none;
@@ -76,18 +76,164 @@ li {
   background-color: var(--white);
   color: var(--primary-color);
   font-size: 1rem;
-  padding: 0.8rem 2rem;
+  padding: .8rem 2rem;
   font-weight: 600;
   cursor: pointer;
 }
 .nav-btn:hover {
   background-color: var(--primary-color);
-  transition: all 0.5s ease-in-out;
+  border: 1px solid var(--white);
+  transition: all .5s ease-in-out;
   color: var(--white);
 }
 
 /* Header */
 header {
+  padding: 1rem;
+  overflow: hidden;
+  width: 100%;
+}
+.hero-wrapper {
+  background-image: url(/Images/header-bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  border-radius: 1.5rem;
+  padding: 1rem .5rem;
+}
+.hero {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  place-content: center;
+}
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  width: 100%;
+}
+.hero-content h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  animation: h2 1s ease-in-out;
+  animation-delay: .9s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes h2 {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.hero-content p {
+  font-size: 4.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  line-height: 5.5rem;
+  animation: p 1s ease-in-out;
+  animation-delay: 1.4s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes p {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+span.Flight {
+  color: var(--white);
+}
+.exclamation {
+  color: var(--primary-color);
+}
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  animation: cta 1s ease-in-out;
+  animation-delay: 1.8s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes cta {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.cta-btn {
+  width: fit-content;
+  height: fit-content;
+  padding: 1rem 2.5rem;
+  border: none;
+  background-color: var(--primary-color);
+  border-radius: 5rem;
+  color: var(--white);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.cta-btn:hover {
+  background-color: var(--primary-color-dark);
+  transition: all .5s ease-in-out;
+  color: var(--white);
+}
+.play {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: var(--white);
+  cursor: pointer;
+}
+.play:hover {
+  background-color: var(--primary-color);
+  transition: all .5s ease-in-out;
+}
+.play i {
+  font-size: 1.3rem;
+  color: var(--primary-color);
+}
+.play:hover i {
+  transition: all .5s ease-in-out;
+  color: var(--white);
+}
+.hero-image {
+  overflow: visible;
+  right: -30rem;
+  width: 100%;
+  transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  animation: slide 1.1s ease-in-out;
+  animation-timing-function: cubic-bezier(.4, 0, .2, 1);
+}
+@keyframes slide {
+  from {
+    opacity: 0;
+    transform: translateX(300%);
+  }
+  to {
+    opacity: 1;
+  }
+}
   padding: 1rem;
   overflow: hidden;
   width: 100%;
@@ -124,12 +270,38 @@ header {
   font-size: 1rem;
   font-weight: 600;
   color: var(--text-dark);
+  animation: h2 1s ease-in-out;
+  animation-delay: .9s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes h2 {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .hero-content p {
   font-size: 4.5rem;
   font-weight: 600;
   color: var(--text-dark);
   line-height: 5.5rem;
+  animation: p 1s ease-in-out;
+  animation-delay: 1.4s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes p {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 span.Flight {
   color: var(--white);
@@ -140,6 +312,19 @@ span.Flight {
 .hero-cta {
   display: flex;
   gap: 1rem;
+  animation: cta 1s ease-in-out;
+  animation-delay: 1.8s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+@keyframes cta {
+  from {
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .cta-btn {
   width: fit-content;
@@ -155,7 +340,7 @@ span.Flight {
 }
 .cta-btn:hover {
   background-color: var(--primary-color-dark);
-  transition: all 0.5s ease-in-out;
+  transition: all .5s ease-in-out;
   color: var(--white);
 }
 .play {
@@ -170,14 +355,14 @@ span.Flight {
 }
 .play:hover {
   background-color: var(--primary-color);
-  transition: all 0.5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 .play i {
   font-size: 1.3rem;
   color: var(--primary-color);
 }
 .play:hover i {
-  transition: all 0.5s ease-in-out;
+  transition: all .5s ease-in-out;
   color: var(--white);
 }
 .hero-image {
@@ -186,6 +371,17 @@ span.Flight {
   right: -35rem;
   width: 100rem;
   transform: matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+  animation: slide 1.1s ease-in-out;
+  animation-timing-function: cubic-bezier(.4, 0, .2, 1);
+}
+@keyframes slide {
+  from {
+    opacity: 0;
+    transform: translateX(300%);
+  }
+  to {
+    opacity: 1;
+  }
 }
 .hero-image img {
   width: 80rem;
@@ -194,7 +390,7 @@ span.Flight {
   top: -18rem;
   right: 0;
   bottom: 0;
-}
+} */
 
 /* Section 1 */
 .section-1 {
@@ -203,7 +399,7 @@ span.Flight {
   justify-content: center;
   text-align: center;
   height: fit-content;
-  padding: 5rem 2rem;
+  padding: 5rem 1rem;
 }
 .section-1 .container {
   display: flex;
@@ -215,7 +411,7 @@ span.Flight {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 0.5rem;
+  gap: .5rem;
 }
 .section-1 .container .top h2 {
   font-size: 1.5em;
@@ -227,18 +423,18 @@ span.Flight {
     height: 10rem; */
   width: 100%;
   height: 100%;
-  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, .2);
   cursor: pointer;
 }
 .card img:hover {
   transform: scale(1.03);
-  transition: all 0.3s ease-in;
+  transition: all .3s ease-in;
 }
 .card-wrapper {
   display: flex;
   align-items: start;
   justify-content: center;
-  gap: 1rem;
+  gap: 2.5rem;
   padding: auto 2rem;
 }
 .card {
@@ -246,6 +442,39 @@ span.Flight {
   flex-direction: column;
   gap: 1.5rem;
 }
+.card-1 {
+  animation: card-1 1s ease-in-out;
+  animation-delay: .6s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all .6s ease-out;
+}
+.card-1.show,
+.card-2.show,
+.card-3.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.animate {
+  opacity: 0;
+}
+.card-2 {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all .6s ease-out;
+  transition-delay: .5s;
+}
+.card-3 {
+  animation: card-3 1s ease-in-out;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all .6s ease-out;
+  transition-delay: 1s;
+}
+
 .card-row {
   display: flex;
   justify-content: space-between;
@@ -257,7 +486,7 @@ span.Flight {
 .row-one {
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: .8rem;
 }
 .row-one h4 {
   font-size: 1.2em;
@@ -272,8 +501,8 @@ span.Flight {
   width: fit-content;
   height: fit-content;
   padding: 5px 10px;
-  gap: 0.3rem;
-  font-size: 0.9rem;
+  gap: .3rem;
+  font-size: .9rem;
   background-color: var(--primary-color);
   color: var(--white);
   border-radius: 3rem;
@@ -286,7 +515,7 @@ span.Flight {
   gap: 5rem;
   justify-content: center;
   place-content: center;
-  padding: 8rem 2rem 2rem 2rem;
+  padding: 8rem 1rem 2rem 1rem;
   margin: 0 auto;
   max-width: 1150px;
 }
@@ -294,13 +523,13 @@ span.Flight {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 3rem;
+  gap: 1.5rem;
   padding-bottom: 5rem;
 }
 .section-2 .col-1 .top {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: .5rem;
 }
 .hover-card-wrapper {
   display: flex;
@@ -314,38 +543,19 @@ span.Flight {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
   width: 100%;
-  height: fit-content;
+  height: 100%;
   overflow: hidden;
-  height: 15rem;
+  padding-top: 3rem;
   pointer-events: none;
 }
-.hover-card:hover .card-hover, .card-bg {
-  animation: show-data 0.3s forwards;
-  opacity: 1;
-  transition: opacity 0.3s;
+.hover-card:hover .card-hover,
+.card-bg {
+  top: 0;
   pointer-events: auto;
 }
-.hover-card:hover {
-  animation: remove-overflow 2s forwards;
-}
-@keyframes show-data {
-  0% {
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    margin-top: -0.1rem;
-  }
-  100% {
-    opacity: 1;
-    width: 100%;
-    height: 100%;
-    margin-top: -15rem;
-  }
-}
-
 .card-bg {
   border-radius: 1.5rem 1.5rem 0 0;
   display: flex;
@@ -370,22 +580,18 @@ span.Flight {
 }
 .card-hover {
   position: absolute;
-  top: 15rem;
+  top: 100%;
   left: 0;
-  right: 0;
-  bottom: 0;
-  opacity: 0;
   border-radius: 1.5rem 1.5rem 0 0;
   background-color: var(--primary-color);
   color: var(--white);
-  transition: opacity 1s 1s;
-  height: 15rem !important;
+  transition: .3s;
+  height: 100% !important;
   pointer-events: none;
 }
 .card-bg:hover .card-hover {
-  opacity: 1;
   pointer-events: auto;
-  transition-delay: 0s;
+  transition-delay: 0;
 }
 .card-hover .content {
   display: flex;
@@ -399,13 +605,14 @@ span.Flight {
   width: fit-content;
   height: fit-content;
   border: 2px solid var(--white);
-  padding: 0.5rem;
+  padding: .5rem;
 }
 .card-hover .content span i {
   font-size: 1.5rem;
   color: var(--white);
 }
 .card-hover .content p {
+  font-size: .88rem;
   width: 100%;
 }
 .section-2 .col-2 {
@@ -416,15 +623,20 @@ span.Flight {
   margin: 0 auto;
   gap: 3rem;
   padding: auto 2rem;
-  /* width: 100%; */
 }
 .showcase {
   width: 100%;
   height: 100%;
-  box-shadow: rgba(0, 0, 0, 0.2) 5px 5px 20px;
+  box-shadow: rgba(0, 0, 0, .2) 5px 5px 20px;
   max-width: 400px;
   max-height: 500px;
   scroll-margin-top: 5rem;
+  transform: translateX(-50px);
+  transition: all .6s ease-out;
+}
+.showcase.show {
+  opacity: 1;
+  transform: translateX(0);
 }
 .section-2 .col-2 .content {
   display: flex;
@@ -436,16 +648,44 @@ span.Flight {
 .section-2 .col-2 .content h2 {
   font-size: 2.5rem;
   max-width: 100%;
+  transform: translateY(50px);
+  transition: all .6s ease-out;
+  transition-delay: .3s;
+}
+.section-2 .col-2 .content h2.show {
+  opacity: 1;
+  transform: translateX(0);
 }
 .section-2 .col-2 .content p {
   text-align: justify;
   color: var(--text-light);
   font-size: 1rem;
 }
+.section-2 .col-2 .content p.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.paragraph-1 {
+  transform: translateY(50px);
+  transition: all .6s ease-out;
+  transition-delay: .6s;
+}
+.paragraph-2 {
+  transform: translateY(50px);
+  transition: all .6s ease-out;
+  transition-delay: .9s;
+}
 .cta-wrapper {
   display: flex;
   width: 100%;
   height: fit-content;
+  transform: translateY(50px);
+  transition: all .6s ease-out;
+  transition-delay: 1.2s;
+}
+.cta-wrapper.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 .cta-wrapper .btn {
   background-image: url(/Images/header-bg.jpg);
@@ -457,11 +697,11 @@ span.Flight {
   width: 100%;
   cursor: pointer;
   font-weight: 600;
-  border-radius: 0.4rem;
+  border-radius: .4rem;
 }
 .cta-wrapper .btn:hover {
   color: var(--white);
-  transition: all 0.5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 .section-2 .col-3 {
   padding: 5rem 0;
@@ -474,13 +714,31 @@ span.Flight {
   padding: auto 2rem;
 }
 .box-wrapper .box {
-  box-shadow: rgba(0, 0, 0, 0.1) 5px 5px 20px;
+  box-shadow: rgba(0, 0, 0, .1) 5px 5px 20px;
   padding: 3rem;
   background-color: var(--extra-light);
   border-radius: 2rem;
   text-align: center;
   gap: 1rem;
   width: 100%;
+}
+.box-1{
+  transform: translateY(50px);
+  transition: all .6s ease-out;
+}
+.box-2{
+  transform: translateY(50px);
+  transition: all .6s ease-out;
+  transition-delay: .5s;
+}
+.box-3{
+  transform: translateY(50px);
+  transition: all .6s ease-out;
+  transition-delay: 1s;
+}
+.box-wrapper .box.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 .box-wrapper .box h2 {
   font-size: 5rem;
@@ -494,7 +752,7 @@ span.Flight {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  padding: 5rem 2rem;
+  padding: 5rem 1rem;
   width: 100%;
   max-width: 1150px;
   margin: 0 auto;
@@ -503,7 +761,7 @@ span.Flight {
 .section-3 .top {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: .5rem;
 }
 .dotted-box-wrapper {
   display: flex;
@@ -527,9 +785,27 @@ span.Flight {
   gap: 1rem;
   text-align: center;
 }
+.dotted-box.show{
+  opacity: 1;
+  transform: translateY(0);
+}
+.dot-box-1{
+  transform: translateY(50px);
+  transition: all .6s ease-out;
+}
+.dot-box-2{
+  transform: translateY(50px);
+  transition: all .6s ease-out;
+  transition-delay: .5s;
+}
+.dot-box-3{
+  transform: translateY(50px);
+  transition: all .6s ease-out;
+  transition-delay: 1s;
+}
 .dotted-box:hover {
-  box-shadow: rgba(0, 0, 0, 0.1) 5px 5px 20px;
-  transition: all 0.3s ease-in-out;
+  box-shadow: rgba(0, 0, 0, .1) 5px 5px 20px;
+  transition: all .3s ease-in-out;
 }
 .dotted-box span {
   width: fit-content;
@@ -551,7 +827,7 @@ span.Flight {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  padding: 5rem 2rem;
+  padding: 5rem 1rem;
   width: 100%;
   max-width: 1150px;
   margin: 0 auto;
@@ -561,7 +837,7 @@ span.Flight {
 .section-4 .top {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: .5rem;
 }
 .review-wrapper {
   display: flex;
@@ -579,13 +855,14 @@ span.Flight {
   flex-direction: column;
   gap: 1rem;
   border-radius: 1rem;
-  padding: 0.3rem 0.3rem 1rem 0.3rem;
+  padding: .3rem .3rem 1rem .3rem;
   background-color: var(--extra-light);
   scroll-snap-align: center;
+  justify-content: space-between;
 }
 .reviews:hover {
   background-color: var(--primary-color);
-  transition: all 0.5s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 .reviews:hover .info h4 {
   color: var(--white);
@@ -627,12 +904,12 @@ span.Flight {
 .info {
   display: flex;
   flex-direction: column;
-  gap: 0.2rem;
+  gap: .2rem;
 }
 /* footer */
 footer {
   background-color: var(--extra-light);
-  padding: 5rem 2rem 1rem 2rem;
+  padding: 5rem 1rem 1rem 1rem;
 }
 footer .container {
   display: flex;
@@ -672,7 +949,7 @@ footer .container .top {
 .socials span {
   width: fit-content;
   height: fit-content;
-  padding: 0.6rem;
+  padding: .6rem;
   background-color: var(--primary-color);
   border-radius: 50%;
   cursor: pointer;
@@ -706,7 +983,7 @@ footer .container .top {
 .data {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
+  gap: .8rem;
   text-decoration: none;
   font-size: 1rem;
   color: var(--text-light);
@@ -722,10 +999,10 @@ form {
 }
 input {
   width: 17rem;
-  border-radius: 0.3rem;
+  border-radius: .3rem;
   color: var(--text-dark);
   font-size: 1rem;
-  padding: 0.75rem;
+  padding: .75rem;
   border: 1px solid var(--text-light);
   background-color: var(--white);
 }
@@ -734,17 +1011,17 @@ input:active {
 }
 form button {
   width: 100%;
-  border-radius: 0.3rem;
+  border-radius: .3rem;
   color: var(--white);
   font-size: 1rem;
-  padding: 0.75rem;
+  padding: .75rem;
   border: none;
   background-color: var(--primary-color);
   cursor: pointer;
 }
 form button:hover {
   background-color: var(--primary-color-dark);
-  transition: all 0.3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 .copyright {
   color: var(--text-light);
