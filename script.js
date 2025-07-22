@@ -22,12 +22,11 @@ const revealOnScroll = () => {
     const cardTop = card.getBoundingClientRect().top;
 
     if (cardTop < triggerPoint) {
-      card.classList.add('show'); // Add the "show" class when in view
+      card.classList.add('show');
     } 
   });
 };
 
 // Run on scroll
 window.addEventListener('scroll', revealOnScroll);
-// Run on page load in case some elements are already visible
 window.addEventListener('load', revealOnScroll);
