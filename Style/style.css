@@ -695,6 +695,11 @@ span.Flight {
   gap: 2rem;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.track {
+  display: flex;
+  gap: 2rem;
 }
 .reviews {
   display: flex;
@@ -703,7 +708,7 @@ span.Flight {
   border-radius: 1rem;
   padding: .3rem .3rem 1rem .3rem;
   background-color: var(--extra-light);
-  scroll-snap-align: center;
+  scroll-snap-align: start;
   justify-content: space-between;
 }
 .reviews:hover {
@@ -764,7 +769,7 @@ footer .container {
   gap: 7rem;
   align-items: center;
   width: 100%;
-  max-width: 1080px;
+  max-width: 1180px;
   margin: 0 auto;
 }
 footer .container .top {
@@ -777,8 +782,8 @@ footer .container .top {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding: 0 1rem;
   width: 100%;
+  padding: 0 1rem;
 }
 .row h4 {
   font-size: 1.2rem;
@@ -793,15 +798,14 @@ footer .container .top {
   gap: 1rem;
 }
 .socials span {
-  width: fit-content;
-  height: fit-content;
-  padding: .6rem;
+  padding: .75rem;
   background-color: var(--primary-color);
   border-radius: 50%;
   cursor: pointer;
 }
 .socials span:hover {
   background-color: var(--primary-color-dark);
+  transition: all .3s ease-in-out;
 }
 .socials a {
   text-decoration: none;
@@ -810,6 +814,17 @@ footer .container .top {
   font-size: 1.25rem;
   color: var(--white);
 }
+.row-2 .container{
+  width: fit-content;
+  display: flex;
+  text-align: left;
+  justify-content: start;
+  align-items: start;
+  gap: 2rem;
+}
+/* .row-2 .container .li{
+  text-align: left;
+} */
 .row-4 {
   padding-left: -2rem;
 }
@@ -844,7 +859,7 @@ form {
   width: 100%;
 }
 input {
-  width: 17rem;
+  width: 100%;
   border-radius: .3rem;
   color: var(--text-dark);
   font-size: 1rem;

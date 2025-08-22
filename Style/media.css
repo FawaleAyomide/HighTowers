@@ -234,6 +234,9 @@
   input {
     width: 100%;
   }
+  .row-2 .container{
+    width: 100%;
+  }
 }
 @media (max-width: 540px) {
   /* Header */

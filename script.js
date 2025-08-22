@@ -1,7 +1,7 @@
 const toggler = document.querySelector(".hamburger");
 const navBar = document.querySelector(".navlinks");
 const navLinkItems = navBar.querySelectorAll("a");
-const animatedCards = document.querySelectorAll('.animate');
+const animatedCards = document.querySelectorAll(".animate");
 
 toggler.onclick = () => {
   toggler.classList.toggle("active");
@@ -18,15 +18,16 @@ navLinkItems.forEach((link) => {
 const revealOnScroll = () => {
   const triggerPoint = window.innerHeight - 100;
 
-  animatedCards.forEach(card => {
+  animatedCards.forEach((card) => {
     const cardTop = card.getBoundingClientRect().top;
 
     if (cardTop < triggerPoint) {
-      card.classList.add('show');
-    } 
+      card.classList.add("show");
+    }
   });
 };
 
 // Run on scroll
-window.addEventListener('scroll', revealOnScroll);
-window.addEventListener('load', revealOnScroll);
+window.addEventListener("scroll", revealOnScroll);
+window.addEventListener("load", revealOnScroll);
+
